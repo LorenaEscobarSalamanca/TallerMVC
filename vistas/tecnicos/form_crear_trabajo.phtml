@@ -1,0 +1,24 @@
+<?php
+ require_once("./vistas/header.phtml");
+ require_once("./vistas/menuTecnicos.phtml");
+?>
+<div class="divFormularios">
+    <form action="index.php?controller=trabajos&action=save" method="post">
+        <p>
+            Nombre del Cliente: <input type="text" id="cliente" name="cliente" class="form-control">
+        </p>
+        <p>
+            Placa del Vehículo: <input type="text" id="placa" name="placa" class="form-control">
+        </p>
+        <p>
+            <input type="hidden" name="fechaInicio" value="<?=horaActual() ?>">
+        
+        </p>
+            <input type="submit" value="Iniciar Trabajo" class="btn btn-secondary centrar">
+    </form>
+</div>
+
+<?php
+ require_once("./vistas/footer.phtml");
+?>
+     

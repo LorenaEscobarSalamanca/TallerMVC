@@ -1,0 +1,29 @@
+      
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Opciones Usuarios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-danger" href="?controller=usuarios&action=create">Crear Usuarios</a>
+          <a class="dropdown-item text-danger" href="index.php?controller=usuarios">Mostrar Usuarios</a>
+        </div>
+      </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-danger" href="index.php?controller=homeAdministrador">Ordenes de trabajo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-danger" href="index.php?controller=login&action=salir">salir</a>
+      </li>
+    </ul>
+    <p class="nombreUsuario">
+    <?php
+      if (isset($_SESSION['nombre'])){
+        echo($_SESSION['nombre']);
+      } else{
+        echo("");
+      }      
+      ?>
+    </p>
+  </div>
+</nav>

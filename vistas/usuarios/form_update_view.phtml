@@ -1,0 +1,36 @@
+<?php
+ require_once("./vistas/header.phtml");
+ require_once("./vistas/menuAdministrador.phtml");
+?>
+
+  <div class="divFormularios">
+    <form class="" action="index.php?controller=usuarios&action=update" method="post">
+
+      <p>
+        nombre: <input type="text" name="nombre" value="<?php echo $datos['nombre']; ?>" class="form-control">
+      </p>
+      <p>
+        email: <input type="text" name="email" value="<?php echo $datos['email']; ?>" class="form-control">
+      </p>
+
+      <p>
+        password: <input type="password" name="password" value="<?php echo $datos['password']; ?>" class="form-control">
+      </p>
+
+      <p>
+        rol: <select class="custom-select" name="rol">
+            <option value="administrador"<?php echo ($datos['rol'] == 'administrador')?"SELECTED" : "" ; ?>>Administrador</option>
+            <option value="tecnico"<?php echo ($datos['rol'] == 'tecnico')?"SELECTED" : "" ; ?>>Técnico</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="submit" name="" value="Actualizar usuario" class="btn btn-secondary centrar">
+      </p>
+
+      <input type="hidden" name="id" value="<?php echo $datos['id']; ?>">
+    </form>
+  </div> 
+    <?php
+ require_once("./vistas/footer.phtml");
+?>

@@ -1,0 +1,44 @@
+<?php
+ require_once("./vistas/header.phtml");
+?>
+
+<li class="nav-item">
+        <a class="nav-link text-danger" href="?controller=login&action=salir">salir</a>
+      </li>
+    </ul>
+    <p class="nombreUsuario">
+    <?php
+      if (isset($_SESSION['nombre'])){
+        echo($_SESSION['nombre']);
+      } else{
+        echo("");
+      }      
+      ?>
+    </p>
+  </div>
+</nav>
+  
+  <div class="divFormularios">
+    <form action="index.php?controller=login&action=ingresar" method="post">
+        
+        <p>
+            Email: <input type="text" id="email" name="email" class="form-control">
+        </p>
+        <p>
+            Contraseña: <input type="password" id="password" name="password" class="form-control">
+        </p>
+        <p>
+            <input type="submit" value="Ingresar" class="btn btn-secondary centrar">
+        </p>
+
+        <p>
+            <?php
+                echo(isset($datos['error'])? $datos['error'] : "");
+            ?>
+        </p>
+    </form>
+    </div>
+
+<?php
+ require_once("./vistas/footer.phtml");
+?>

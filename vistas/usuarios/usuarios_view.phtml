@@ -1,0 +1,40 @@
+    <?php
+    require_once("./vistas/header.phtml");
+    require_once("./vistas/menuAdministrador.phtml");
+    ?>
+
+    <h1>Usuarios Actuales</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Contraseña</th>
+                <th>Rol</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php
+                foreach ($datos as $dato => $value) {
+                    echo "<tr>";
+                    foreach ($value as $dato){
+                        echo("<td>" . $dato . "</td>");
+                    }
+                    echo "<td>";
+                    echo "<a href='index.php?controller=usuarios&action=view&id=".$value['id']." class='botonesVEB''><button type='button' class='btn btn-secondary'>Ver</button></a> ";
+                    echo "<a href='index.php?controller=usuarios&action=edit&id=".$value['id']." class='botonesVEB''><button type='button' class='btn btn-secondary'>Editar</button></a>   ";
+                    echo "<a href='index.php?controller=usuarios&action=delete&id=".$value['id']." class='botonesVEB''><button type='button' class='btn btn-secondary'>Borrar</button></a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+            ?>
+        </tbody>
+    </table>
+        
+    <?php
+    require_once("./vistas/footer.phtml");
+    ?>

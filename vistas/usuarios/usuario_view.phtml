@@ -1,0 +1,19 @@
+<?php
+ require_once("./vistas/header.phtml");
+ require_once("./vistas/menuAdministrador.phtml");
+?>
+
+  <?php
+
+    foreach ($datos as $key => $value) {
+      echo "<tr>";
+      echo ("<th>".$key."</th>");
+      echo("<td>" . $value . "</td>");
+      echo "</tr>";
+    }
+
+   ?>
+
+<?php
+ require_once("./vistas/footer.phtml");
+?>

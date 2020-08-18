@@ -1,0 +1,39 @@
+<?php
+ require_once("./vistas/header.phtml");
+ require_once("./vistas/menuTecnicos.phtml");
+?>
+
+<h1>Servicios realizados</h1>
+    <table>
+            <thead>
+                <tr>                
+                    <th>N° Orden</th>
+                    <th>Nombre Cliente</th>
+                    <th>Placa</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Fin</th>
+                    <th>Diagnostico</th>
+                    <th>Descripción</th>
+                    <th>Materiales</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($datos as $dato => $value) {
+                    echo "<tr>";
+                    foreach ($value as $dato){
+                        echo("<td>" . $dato . "</td>");
+                    }
+                    echo "<td>";
+                    echo "<a href='index.php?controller=trabajos&action=view&id=".$value['id']." class='botonesVEB''><button type='button' class='btn btn-secondary'>Ver</button></a>  ";
+                    echo "<a href='index.php?controller=trabajos&action=edit&id=".$value['id']." class='botonesVEB''><button type='button' class='btn btn-secondary'>Editar</button></a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+    </table>
+<?php
+ require_once("./vistas/footer.phtml");
+?>

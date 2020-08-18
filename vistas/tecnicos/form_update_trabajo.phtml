@@ -1,0 +1,38 @@
+<?php
+ require_once("./vistas/header.phtml");
+ dirigirMenu();
+?>
+
+  <div class="divFormularios">
+    <form class="" action="index.php?controller=trabajos&action=update" method="post">
+
+        <p>
+            Nombre del Cliente: <input type="text" id="cliente" name="cliente" value="<?php echo $datos['cliente']; ?>" class="form-control">
+        </p>
+        <p>
+            Placa del Vehículo: <input type="text" id="placa" name="placa" value="<?php echo $datos['placa']; ?>" class="form-control">
+        </p>
+        <p>
+            <input type="hidden" name="fechaFin" value="<?=horaActual() ?>">
+        
+        </p>
+        <p>
+          Diagnostico: <input type="text" id="diagnostico" name="diagnostico" class="form-control" value="<?php echo $datos['diagnostico']; ?>">
+        </p>
+        <p>
+          Descripción del trabajo: <textarea name="descripcion" id="descripcion" cols="20" rows="5"class="form-control" ><?php echo $datos['descripcion']; ?></textarea>
+        </p>
+        <p>
+          Materiales utilizados: <textarea name="materiales" id="materiales" cols="20" rows="5"class="form-control" ><?php echo $datos['materiales']; ?></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Finalizar Trabajo" class="btn btn-secondary centrar">
+        </p>
+
+      <input type="hidden" name="id" value="<?php echo $datos['id']; ?>">
+      <input type="hidden" name="fechaInicio" value="<?php echo $datos['fechaInicio']; ?>">
+    </form>
+    </div>  
+    <?php
+ require_once("./vistas/footer.phtml");
+?>

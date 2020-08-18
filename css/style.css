@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+table {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 15px;
+    margin: 10px auto;
+    
+}
+td{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #525252 ;
+}
+.redes {
+    display: flex;
+    margin: auto;
+    width: 20%;
+    justify-content: space-around;
+}
+.redes a img{
+    width: 45px;
+    height: 40px;
+    margin: 0 10px;
+}
+#logoApp{
+    height: 50px;
+}
+.letraMenu{
+    font-size: 23px;
+}
+.nombreUsuario{
+    font-size: 15px;
+    color: #e04b59;
+}
+.botonesVEB a button{
+    margin: 200px;
+}
+h1{
+    color: #525252 ;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+form{
+    border: #525252;
+}
+form p{
+    margin-top: 30px;
+    font-size: 18px;
+    color: #525252 ;
+}
+.divFormularios{
+    margin: 20px auto;
+    width: 50%;
+    justify-content: center;
+}
+.centrar{
+    margin: auto;
+    display: block;
+    
+}

@@ -1,0 +1,30 @@
+<?php
+ require_once("./vistas/header.phtml");
+ require_once("./vistas/menuAdministrador.phtml");
+?>
+   <div class="divFormularios">
+        <form action="index.php?controller=usuarios&action=save" method="post">
+            <p>
+                Nombre: <input type="text" id="nombre" name="nombre" class="form-control">
+            </p>
+            <p>
+                Email: <input type="text" id="email" name="email" class="form-control">
+            </p>
+            <p>
+                Contraseña: <input type="text" id="password" name="password" class="form-control">
+            </p>
+            <p>
+                Rol: <select class="custom-select" name="rol" id="rol">
+                    <option value="administrador">Administrador</option>
+                    <option value="tecnico">Técnico</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Crear Usuario" class="btn btn-secondary centrar">
+            </p>
+        </form>
+    </div>   
+<?php
+ require_once("./vistas/footer.phtml");
+?>
+     
